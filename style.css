@@ -1,0 +1,26 @@
+
+body {
+  background-color: #333; /* 背景色を黒系に設定 */
+  color: #fff; /* 文字色を白に設定 */
+}
+
+
+.sns-icon {
+  box-shadow: 0px 0px 10px 1px white;
+  border-radius: 10px; /* 四隅を削る */
+  min-width: 72px; /* アイコンの幅を固定 */
+  height: 72px; /* アイコンの高さを固定 */
+  display: inline-block;
+  overflow: hidden; /* 四隅を削るために必要 */
+}
+.sns-icon img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.link-highlight, a {
+  color: #4f9bff; /* リンクの色 */
+  text-decoration: underline; /* 下線を追加 */
+}

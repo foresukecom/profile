@@ -1,7 +1,7 @@
 
 body {
   background-color: #333; /* 背景色を黒系に設定 */
-  color: rgb(191, 191, 191); /* 文字色を白に設定 */
+  color: rgb(190, 190, 190); /* 文字色を白に設定 */
 }
 
 h2 {
@@ -17,7 +17,7 @@ h2:after {
   right: 0;
   bottom: 0;
   height: 1px; /* 線の太さを調整 */
-  background-color: rgb(191, 191, 191); /* 線の色を調整 */
+  background-color: rgb(190, 190, 190); /* 線の色を調整 */
 }
 
 .sns-icon {

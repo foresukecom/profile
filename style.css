@@ -7,6 +7,7 @@ body {
 h2 {
   font-size: 1.5rem; /* 文字の大きさを調整 */
   position: relative;
+  margin-top: 25px; /* 上部の空白を調整 */
 }
 
 h2:after {
@@ -42,4 +43,19 @@ h2:after {
 .link-highlight, a {
   color: #4f9bff; /* リンクの色 */
   text-decoration: underline; /* 下線を追加 */
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* アイコン間の隙間を調整 */
+}
+
+.skill-icons a {
+  transition: 0.3s; /* スムーズな遷移効果 */
+  display: inline-block; /* 他のプロパティと一緒に使用するため */
+}
+
+.skill-icons a:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 光らせる効果 */
 }

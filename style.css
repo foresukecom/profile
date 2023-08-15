@@ -6,7 +6,6 @@ body {
 
 
 .sns-icon {
-  box-shadow: 0px 0px 10px 1px white;
   border-radius: 10px; /* 四隅を削る */
   min-width: 72px; /* アイコンの幅を固定 */
   height: 72px; /* アイコンの高さを固定 */

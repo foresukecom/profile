@@ -1,61 +1,229 @@
+:root {
+  --maincolor: #666666;
+  --bordercl: #888888;
+  --callouctcolor: #999999;
+  --hovercolor: #555555;
+  --darkMaincolor: #aaaaaa;
+
+  --bg-color: #fff;
+  --text-color: #232333;
+  --code-bg: #f1f1f1;
+  --pre-bg: #ececec;
+  --blockquote-color: #737373;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #292a2d;
+    --text-color: #dcdcdc;
+    --bordercl: #444;
+    --code-bg: #333;
+    --pre-bg: #333;
+    --blockquote-color: #aaa;
+    --hovercolor: #888;
+  }
+
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
+}
+
+html {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  line-height: 1.6em;
+}
 
 body {
-  background-color: #333; /* 背景色を黒系に設定 */
-  color: rgb(190, 190, 190); /* 文字色を白に設定 */
-}
-
-h2 {
-  font-size: 1.5rem; /* 文字の大きさを調整 */
-  position: relative;
-  margin-top: 25px; /* 上部の空白を調整 */
-}
-
-h2:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px; /* 線の太さを調整 */
-  background-color: rgb(190, 190, 190); /* 線の色を調整 */
-}
-
-.sns-icon {
-  border-radius: 10px; /* 四隅を削る */
-  min-width: 72px; /* アイコンの幅を固定 */
-  height: 72px; /* アイコンの高さを固定 */
-  display: inline-block;
-  overflow: hidden; /* 四隅を削るために必要 */
-}
-.sns-icon img {
   display: block;
+  margin: 8px;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--maincolor);
+  color: #fff;
+}
+
+p {
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.2rem;
+  margin-top: 2em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1::before {
+  color: var(--maincolor);
+  content: '# ';
+}
+
+h2::before {
+  color: var(--maincolor);
+  content: '## ';
+}
+
+h3::before {
+  color: var(--maincolor);
+  content: '### ';
+}
+
+a {
+  border-bottom: 3px solid var(--maincolor);
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+a:hover {
+  background-color: var(--hovercolor);
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding-left: 2ch;
+}
+
+ul li {
+  text-indent: -2ch;
+}
+
+ul>li::before {
+  content: '* ';
+  font-weight: bold;
+  color: var(--maincolor);
+}
+
+/* Images */
+img {
   max-width: 100%;
-  max-height: 100%;
-  transition: all 0.3s ease; /* トランジション効果 */
 }
 
-.sns-icon img:hover {
-  filter: brightness(1.5);  /* 明るさを増加 */
-  transform: scale(1.1); /*  ちょっとズーム */
+.profile-img {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-
-.link-highlight, a {
-  color: #4f9bff; /* リンクの色 */
-  text-decoration: underline; /* 下線を追加 */
-}
-
-.skill-icons {
+/* Header */
+header {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* アイコン間の隙間を調整 */
+  justify-content: space-between;
+  margin: 1em 0;
+  line-height: 2.5em;
 }
 
-.skill-icons a {
-  transition: 0.3s; /* スムーズな遷移効果 */
-  display: inline-block; /* 他のプロパティと一緒に使用するため */
+header .main {
+  font-size: 1.5rem;
 }
 
-.skill-icons a:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 光らせる効果 */
+/* Containers */
+.content {
+  margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding: 0 1ch;
+  word-wrap: break-word;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  border-top: 0.4rem dotted var(--bordercl);
+  padding: 2rem 0rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+/* SNS Grid */
+.sns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sns-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.sns-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.sns-icon-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sns-desc {
+  font-size: 0.9em;
+}
+
+/* Footer Author (reused from blog) */
+.footer-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 1em 0;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.footer-author-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--bordercl);
+  flex-shrink: 0;
+}
+
+.footer-author-info {
+  flex: 1;
+}
+
+.footer-author-name {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+
+.footer-author-social {
+  display: flex;
+  gap: 0.8em;
+  margin-top: 0.5em;
+}
+
+.footer-author-social a {
+  border: none;
 }

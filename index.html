@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    
+    <!-- Google Fonts for Archie Theme -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-THXEPN7LDN"></script>
@@ -24,298 +28,163 @@
     <meta name="twitter:description" content="自己紹介ページ。どうぞよろしく。">
     <meta name="twitter:image" content="https://foresukecom.github.io/profile/images/はこね.png">
     
-    <link rel="stylesheet" href="./style.css" />
     <title>ふぉれすけの名刺</title>
   </head>
   <body>
-    <div class="container mx-auto p-8">
-      <img src="./images/はこね.png" class="w-18 h-18 rounded shadow-lg" />
+    <div class="content">
+      <header>
+        <div class="main"><a href="./">ふぉれすけの名刺</a></div>
+        <nav>
+          <a href="https://blog.foresuke.com">Blog</a>
+          <a href="https://blog.foresuke.com/about">About</a>
+        </nav>
+      </header>
 
-      <h2 class="text-xl mb-2">自己紹介</h2>
-      <p class="mb-4">
-        ふぉれすけです。 <br />
-        ITエンジニアをやっています。 <br />
-        お酒大好きマン。
-      </p>
+      <main>
+        <div class="intro">
+            <img src="./images/はこね.png" class="profile-img" width="120" height="120" alt="Profile Icon" />
+            <h2 id="about">自己紹介</h2>
+            <p>
+                ふぉれすけです。<br />
+                ITエンジニアをやっています。<br />
+                お酒大好きマン。
+            </p>
+        </div>
 
-      <h2 class="text-xl mb-2">SNSアカウント集</h2>
-      <p class="mb-4">
-        あまり活動できていないSNSアカウント達。  
-        中央集権じゃない分散型SNSが流行るんでしょうか、それとも…  
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Twitterリンク -->
-        <div class="flex items-center">
-          <div class="sns-icon">
-            <a href="https://twitter.com/foresukecom">
-              <img src="./images/x.jpeg" />
-            </a>
-          </div>
-          <span class="ml-4">最近ご無沙汰な𝕏(旧Twitter)アカウント</span>
-        </div>
-        <!-- Blueskyリンク -->
-        <div class="flex items-center">
-          <div class="sns-icon">
-            <a href="https://bsky.app/profile/foresuke.com">
-              <img src="./images/bluesky.png" />
-            </a>
-          </div>
-          <span class="ml-4">招待コードを申込んでから数ヶ月後に発行されたBlueskyアカウント</span>
-        </div>
-        <!-- githubリンク -->
-        <div class="flex items-center">
-          <div class="sns-icon">
-            <a href="https://github.com/foresukecom">
-              <img
-                src="./images/github.png"
-                class="w-18 h-18 rounded shadow-lg"
-              />
-            </a>
-          </div>
-          <span class="ml-4"
-            >ブログの記事を置くことがメインになりつつあるGithub</span
-          >
-        </div>
-        <!-- threadsリンク -->
-        <div class="flex items-center">
-          <div class="sns-icon">
-            <a href="https://www.threads.net/@foresuke">
-              <img
-                src="./images/threads.jpg"
-                class="w-18 h-18 rounded shadow-lg"
-              />
-            </a>
-          </div>
-          <span class="ml-4"
-            >一応登録したけど使いこなしていないthreadsアカウント</span
-          >
-        </div>
-        <!-- Mastodonリンク -->
-        <div class="flex items-center">
-          <div class="sns-icon">
-            <a href="https://mstdn.jp/@foresuke">
-              <img
-                src="./images/mastodon.png"
-                class="w-18 h-18 rounded shadow-lg"
-              />
-            </a>
-          </div>
-          <span class="ml-4"
-            >2017年に登録したがほぼ使っていないマストドンアカウト</span
-          >
-        </div>
-        <!-- misskeyリンク -->
-        <div class="flex items-center">
-          <div class="sns-icon">
-            <a href="https://misskey.io/@foresuke">
-              <img
-                src="./images/misskey.png"
-                class="w-18 h-18 rounded shadow-lg"
-              />
-            </a>
-          </div>
-          <span class="ml-4">
-            たまに覗いてタイムラインの投稿にリアクションするだけのmisskeyアカウント
-          </span>
-        </div>
-        <!-- Discordリンク -->
-        <div class="flex items-start">
-          <div class="sns-icon">
-            <a href="https://discord.com/users/1138361849843302482">
-              <img
-                src="./images/discord.jpg"
-                class="w-18 h-18 rounded shadow-lg"
-              />
-            </a>
-          </div>
-          <div class="ml-4 flex-grow">
-            ROM専になりかけているDiscordアカウント<br />
-            旧アカウント(<a
-              href="https://discord.com/users/336032832264601610"
-              class="link-highlight"
-              >YOH</a
-            >)、新アカウント(<a
-              href="https://discord.com/users/1138361849843302482"
-              class="link-highlight"
-              >ふぉれすけ</a
-            >) のいずれかからどうぞ。
-          </div>
-        </div>
-        <!-- Steamリンク -->
-        <div class="flex items-start">
-          <div class="sns-icon">
-            <a href="https://steamcommunity.com/profiles/76561198050691017/">
-              <img
-                src="./images/steam.png"
-                class="w-18 h-18 rounded shadow-lg"
-              />
-            </a>
-          </div>
-          <div class="ml-4 flex-grow">
-            遊ぶより買う頻度が高いSteamアカウント<br />
-            FPSやオープンワールドも好きだけど、Steamの<a
-              href="https://store.steampowered.com/remoteplay?l=japanese#together"
-              class="link-highlight"
-              >REMOTE PLAY TOGETHER</a
-            >
-            を使ってさくっとワンナイトで遊べるゲームが好きです。
-          </div>
-        </div>
-      </div>
+        <h2 id="links">ブログ</h2>
+        <ul>
+            <li>
+                <a href="https://blog.foresuke.com">すけログ</a> -
+                技術やら漫画の感想やら、色々書いてるブログです。
+            </li>
+        </ul>
 
-      <h2 class="text-xl mb-2">リンク集</h2>
+        <h2 id="sns">SNSアカウント集</h2>
+        <p>
+            あまり活動できていないSNSアカウント達。<br>
+            中央集権じゃない分散型SNSが流行るんでしょうか、それとも…
+        </p>
 
-      <ul>
-        <li>
-          <a href="https://blog.foresuke.com">すけログ</a> -
-          技術やら漫画の感想やら、色々書いてるブログです。
-        </li>
-        <li>
-          <a href="https://wave.foresuke.com/">Code Wave</a> -
-          マトリックス風にメッセージを投稿するツールです。
-        </li>
-        <li>
-          <a href="https://loading-experience.foresuke.com">Loading UX Tester</a> -
-          待ち時間とUIの影響を確認するページです。  
-        </li>
-        <li>
-          <a href="https://tools.foresuke.com">開発の友</a> -
-          仕事などで使える便利ツールを色々と作っています。
-          ソースコードは<a href="https://github.com/foresukecom/toolbox">こちら</a>で公開中です。
-        </li>
-      </ul>
+        <div class="sns-grid">
+            <!-- Bluesky -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://bsky.app/profile/foresuke.com">
+                        <img src="./images/bluesky.png" alt="Bluesky">
+                    </a>
+                </div>
+                <div class="sns-desc">招待コードを申込んでから数ヶ月後に発行されたBlueskyアカウント</div>
+            </div>
 
-      <h2 class="text-xl mb-2">スキルセット</h2>
-      <p class="mb-4">
-        ダニングクルーガー効果じゃない方の「チョットデキル」スキル群。  
-      </p>
+            <!-- GitHub -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://github.com/foresukecom">
+                        <img src="./images/github.png" alt="GitHub">
+                    </a>
+                </div>
+                <div class="sns-desc">ブログの記事を置くことがメインになりつつあるGithub</div>
+            </div>
 
-      <p class="skill-icons">
-        <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-            alt="aws"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.gnu.org/software/bash/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
-            alt="bash"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://www.w3schools.com/css/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-            alt="css3"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
-            alt="docker"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-            alt="git"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://golang.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg"
-            alt="go"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-            alt="html5"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://gohugo.io/" target="_blank" rel="noreferrer">
-          <img
-            src="https://api.iconify.design/logos-hugo.svg"
-            alt="hugo"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-            alt="javascript"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-            alt="mysql"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-            alt="nodejs"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.php.net" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-            alt="php"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://www.python.org" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-            alt="python"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-            alt="vuejs"
-            width="40"
-            height="40"
-          />
-        </a>
-      </p>
+            <!-- Mastodon -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://mstdn.jp/@foresuke">
+                        <img src="./images/mastodon.png" alt="Mastodon">
+                    </a>
+                </div>
+                <div class="sns-desc">2017年に登録したがほぼ使っていないマストドンアカウト</div>
+            </div>
+
+            <!-- Misskey -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://misskey.io/@foresuke">
+                        <img src="./images/misskey.png" alt="Misskey">
+                    </a>
+                </div>
+                <div class="sns-desc">たまに覗いてタイムラインの投稿にリアクションするだけのmisskeyアカウント</div>
+            </div>
+
+            <!-- Discord -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://discord.com/users/1138361849843302482">
+                        <img src="./images/discord.jpg" alt="Discord">
+                    </a>
+                </div>
+                <div class="sns-desc">
+                    ROM専になりかけているDiscordアカウント<br>
+                    <a href="https://discord.com/users/1138361849843302482">ふぉれすけ</a>
+                </div>
+            </div>
+
+            <!-- Steam -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://steamcommunity.com/profiles/76561198050691017/">
+                        <img src="./images/steam.png" alt="Steam">
+                    </a>
+                </div>
+                <div class="sns-desc">
+                    遊ぶより買う頻度が高いSteamアカウント<br>
+                    <a href="https://store.steampowered.com/remoteplay?l=japanese#together">REMOTE PLAY TOGETHER</a>でさくっと遊ぶのが好き。
+                </div>
+            </div>
+
+            <!-- Twitter -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://twitter.com/foresukecom">
+                        <img src="./images/x.jpeg" alt="X/Twitter">
+                    </a>
+                </div>
+                <div class="sns-desc">最近ご無沙汰な𝕏(旧Twitter)アカウント</div>
+            </div>
+            
+            <!-- Threads -->
+            <div class="sns-item">
+                <div class="sns-icon-wrapper">
+                    <a href="https://www.threads.net/@foresuke">
+                        <img src="./images/threads.jpg" alt="Threads">
+                    </a>
+                </div>
+                <div class="sns-desc">一応登録したけど使いこなしていないthreadsアカウント</div>
+            </div>
+
+        </div>
+
+        <h2 id="links">作ったもの</h2>
+        <ul>
+            <li>
+                <a href="https://wave.foresuke.com/">Code Wave</a> -
+                マトリックス風にメッセージを投稿するツールです。
+            </li>
+            <li>
+                <a href="https://loading-experience.foresuke.com">Loading UX Tester</a> -
+                待ち時間とUIの影響を確認するページです。  
+            </li>
+            <li>
+                <a href="https://tools.foresuke.com">開発の友</a> -
+                仕事などで使える便利ツールを色々と作っています。
+                ソースコードは<a href="https://github.com/foresukecom/toolbox">こちら</a>で公開中です。
+            </li>
+        </ul>
+
+      </main>
+
+      <footer>
+        <div class="footer-author">
+           <img src="./images/はこね.png" class="footer-author-icon" alt="foresuke">
+           <div class="footer-author-info">
+             <div class="footer-author-name">foresuke</div>
+             <div class="footer-author-bio">2児の父親兼ITエンジニアのふぉれすけです。<br>ゲームやお酒が大好きで、Podcastをよく聴いています。</div>
+           </div>
+        </div>
+        <div style="text-align: center; color: #999; font-size: 0.8rem;">
+            &copy; 2026 Foresuke
+        </div>
+      </footer>
     </div>
   </body>
 </html>

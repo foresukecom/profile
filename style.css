@@ -229,3 +229,29 @@ footer {
 .footer-author-social a {
   border: none;
 }
+/* Works */
+.work-shot {
+  display: block;
+  max-width: 480px;
+  margin: 0.5em 0 1.5em;
+  border: none;
+  text-indent: 0;
+}
+
+.work-shot:hover {
+  background-color: transparent;
+}
+
+.work-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--bordercl);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.work-shot:hover img {
+  transform: translateY(-2px);
+}

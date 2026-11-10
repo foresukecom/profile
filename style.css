@@ -230,28 +230,68 @@ footer {
   border: none;
 }
 /* Works */
-.work-shot {
-  display: block;
-  max-width: 480px;
-  margin: 0.5em 0 1.5em;
-  border: none;
-  text-indent: 0;
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
 }
 
-.work-shot:hover {
-  background-color: transparent;
+.work-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bordercl);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.work-shot img {
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.work-card img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--bordercl);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  border-bottom: 1px solid var(--bordercl);
 }
 
-.work-shot:hover img {
-  transform: translateY(-2px);
+.work-card-body {
+  padding: 0.8em 1em 1em;
+}
+
+.work-card-body p {
+  margin: 0.4em 0 0;
+  font-size: 0.9em;
+}
+
+/* タイトルのリンクをカード全体に広げる */
+.work-card-title {
+  font-weight: bold;
+  border: none;
+}
+
+.work-card-title::before {
+  content: '> ';
+  color: var(--maincolor);
+}
+
+.work-card-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.work-card-title:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* 説明文中のリンクはカード全体リンクより手前に出す */
+.work-card-body p a {
+  position: relative;
+  z-index: 1;
 }

@@ -157,39 +157,70 @@ footer {
   flex-direction: column;
 }
 
-/* SNS Grid */
-.sns-grid {
+/* SNS Cards */
+.sns-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.sns-item {
+.sns-card {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
-}
-
-.sns-icon-wrapper {
-  width: 60px;
-  height: 60px;
+  padding: 1.2em 0.8em 1em;
+  border: 1px solid var(--bordercl);
   border-radius: 8px;
-  margin-right: 1rem;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.sns-icon-wrapper svg {
-  width: 40px;
-  height: 40px;
+.sns-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.sns-card-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.6em;
+}
+
+.sns-card-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
   fill: currentColor;
 }
 
-.sns-desc {
-  font-size: 0.9em;
+/* 名前のリンクをカード全体に広げる */
+.sns-card-name {
+  font-weight: bold;
+  border: none;
+}
+
+.sns-card-name::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.sns-card-name:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+.sns-card-handle {
+  font-size: 0.8em;
+  color: var(--blockquote-color);
+  overflow-wrap: anywhere;
+}
+
+.sns-card p {
+  margin: 0.4em 0 0;
+  font-size: 0.8em;
 }
 
 /* Footer Author (reused from blog) */

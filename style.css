@@ -263,7 +263,7 @@ footer {
 /* Works */
 .works {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
   margin-top: 1rem;
 }
@@ -325,4 +325,24 @@ footer {
 .work-card-body p a {
   position: relative;
   z-index: 1;
+}
+
+/* スマホでも2列のまま、余白と文字を詰める */
+@media (max-width: 600px) {
+  .works {
+    gap: 0.8rem;
+  }
+
+  .work-card-body {
+    padding: 0.6em 0.7em 0.8em;
+  }
+
+  .work-card-title {
+    font-size: 0.9em;
+  }
+
+  .work-card-body p {
+    font-size: 0.8em;
+    line-height: 1.4;
+  }
 }

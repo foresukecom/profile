@@ -17,12 +17,12 @@
 
 direnv を使わない場合は `nix develop` で同じ開発シェルに入れます。
 
-## アイコン画像
-以下コマンドで画像をリサイズ
+## スクリーンショット画像
+「作ったもの」のスクリーンショットは `images/works/` に置く。  
+1280x800 で撮影したものを 640x400 の WebP に変換する。
 
 ``` bash
-mogrify -resize 75x75 github.png
+magick screenshot.png -resize 640x400 -quality 85 images/works/xxx.webp
 ```
 
-各種SNSのロゴは75*75  
-フクロウアイコンは120*120
+プロフィールアイコン (`images/はこね.png`) は 120x120

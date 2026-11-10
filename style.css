@@ -229,3 +229,69 @@ footer {
 .footer-author-social a {
   border: none;
 }
+/* Works */
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.work-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bordercl);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.work-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--bordercl);
+}
+
+.work-card-body {
+  padding: 0.8em 1em 1em;
+}
+
+.work-card-body p {
+  margin: 0.4em 0 0;
+  font-size: 0.9em;
+}
+
+/* タイトルのリンクをカード全体に広げる */
+.work-card-title {
+  font-weight: bold;
+  border: none;
+}
+
+.work-card-title::before {
+  content: '> ';
+  color: var(--maincolor);
+}
+
+.work-card-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.work-card-title:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* 説明文中のリンクはカード全体リンクより手前に出す */
+.work-card-body p a {
+  position: relative;
+  z-index: 1;
+}

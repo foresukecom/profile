@@ -151,16 +151,6 @@ header .main {
   word-wrap: break-word;
 }
 
-/* Footer */
-footer {
-  display: flex;
-  align-items: center;
-  border-top: 0.4rem dotted var(--bordercl);
-  padding: 2rem 0rem;
-  margin-top: 2rem;
-  flex-direction: column;
-}
-
 /* SNS Cards */
 .sns-cards {
   display: grid;
@@ -227,43 +217,6 @@ footer {
   font-size: 0.8em;
 }
 
-/* Footer Author (reused from blog) */
-.footer-author {
-  display: flex;
-  align-items: center;
-  gap: 0.8em;
-  padding: 1em 0;
-  margin: 1em 0;
-  width: 100%;
-}
-
-.footer-author-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid var(--bordercl);
-  flex-shrink: 0;
-}
-
-.footer-author-info {
-  flex: 1;
-}
-
-.footer-author-name {
-  font-weight: bold;
-  font-size: 1em;
-  margin-bottom: 0.2em;
-}
-
-.footer-author-social {
-  display: flex;
-  gap: 0.8em;
-  margin-top: 0.5em;
-}
-
-.footer-author-social a {
-  border: none;
-}
 /* Works */
 .works {
   display: grid;

@@ -32,7 +32,8 @@
     opacity: 1;
   }
 
-  .work-card img {
+  .work-card img,
+  .media-card img {
     opacity: 1;
   }
 }

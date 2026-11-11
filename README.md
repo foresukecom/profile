@@ -25,4 +25,4 @@ direnv を使わない場合は `nix develop` で同じ開発シェルに入れ�
 magick screenshot.png -resize 640x400 -quality 85 images/works/xxx.webp
 ```
 
-プロフィールアイコン (`images/はこね.png`) は 120x120
+プロフィールアイコン (`images/hakone.png`) は 120x120

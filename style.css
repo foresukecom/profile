@@ -346,3 +346,85 @@ footer {
     line-height: 1.4;
   }
 }
+
+/* Media */
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.media-card {
+  position: relative;
+  display: flex;
+  border: 1px solid var(--bordercl);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.media-card img {
+  display: block;
+  flex: 0 0 40%;
+  width: 40%;
+  height: auto;
+  align-self: flex-start;
+  border-right: 1px solid var(--bordercl);
+}
+
+.media-card-body {
+  flex: 1;
+  min-width: 0;
+  padding: 0.8em 1em 1em;
+}
+
+.media-card-body p {
+  margin: 0.4em 0 0;
+  font-size: 0.9em;
+}
+
+/* タイトルのリンクをカード全体に広げる */
+.media-card-title {
+  font-weight: bold;
+  border: none;
+}
+
+.media-card-title::before {
+  content: '> ';
+  color: var(--maincolor);
+}
+
+.media-card-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.media-card-title:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* スマホでは画像を上、テキストを下に縦積みする */
+@media (max-width: 600px) {
+  .media-card {
+    flex-direction: column;
+  }
+
+  .media-card img {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--bordercl);
+  }
+
+  .media-card-body {
+    padding: 0.6em 0.7em 0.8em;
+  }
+}

@@ -31,6 +31,10 @@
   img:hover {
     opacity: 1;
   }
+
+  .work-card img {
+    opacity: 1;
+  }
 }
 
 html {
